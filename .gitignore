@@ -1,0 +1,27 @@
+## Visual Studio Temp Files
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Publish folders
+bin/Debug/net8.0/publish/
+bin/Release/net8.0/publish/
+
+## Settings
+appsettings.Development.json
