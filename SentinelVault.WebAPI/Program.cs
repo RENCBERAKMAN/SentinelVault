@@ -1,15 +1,23 @@
+using SentinelVault.Persistence; // Persistence katmanýndaki servisleri tanýmak için þart!
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// --- SERVÝS KAYITLARI (Dependency Injection) ---
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Dün hazýrladýðýmýz Persistence servislerini (DbContext ve Repository) sisteme tanýtýyoruz.
+builder.Services.AddPersistenceServices();
+
+// Swagger/OpenAPI ayarlarý (Test ekraný için)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// --- HTTP REQUEST PIPELINE (Ýstek Hattý) ---
+
+// Geliþtirme aþamasýnda Swagger (Test arayüzü) aktif olsun
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

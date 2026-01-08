@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SentinelVault.Application\SentinelVault.Application.csproj" />
+    <ProjectReference Include="..\SentinelVault.Persistence\SentinelVault.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
