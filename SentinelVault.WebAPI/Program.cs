@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Dün hazýrladýðýmýz Persistence servislerini (DbContext ve Repository) sisteme tanýtýyoruz.
-builder.Services.AddPersistenceServices();
+// Eskisi: builder.Services.AddPersistenceServices();
+// Yenisi:
+builder.Services.AddPersistenceServices(builder.Configuration);
 
 // Swagger/OpenAPI ayarlarý (Test ekraný için)
 builder.Services.AddEndpointsApiExplorer();
